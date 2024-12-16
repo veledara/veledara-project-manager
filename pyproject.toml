@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "veledara-project-manager"
+version = "0.1.0"
+description = ""
+authors = ["veledara <painriddlegaming@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
