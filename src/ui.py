@@ -29,7 +29,7 @@ class ProjectLauncher:
         # Привязка событий
         self.search_entry.bind("<Down>", self.move_down_from_se)
         self.search_entry.bind("<Up>", self.move_up_from_se)
-        self.search_entry.bind("<Return>", self.handle_return)
+        self.search_entry.bind("<Return>", self.open_project_from_se)
 
         self.listbox.bind("<Return>", self.open_project)
         self.listbox.bind("<Double-1>", self.open_project)
@@ -125,6 +125,10 @@ class ProjectLauncher:
             sv_ttk.set_theme("dark")
         else:
             sv_ttk.set_theme("light")
+
+    def open_project_from_se(self, event):
+        self.handle_return(self)
+        self.open_project(self)
 
     def move_down_from_se(self, event):
         self.handle_down(self)
